@@ -1,0 +1,3 @@
+For my final project in my introductor engineering course, Engineering in the Kitchen, I was tasked with modifying, trasnforming, or creating a kitchen appliance. I chose to convert a basic old crock pot that had been in my basement for a long time into a sous vide cooker. I used an ESP32 microcontroller with MicroPython and a temperature sensor. I used capacitive touch sensors to take input from a user and used an OLED display to display temperature, time remaining etc. This repo contains code files, graphs/analysis of the system, and a video demonstration of my sous vide cooker in use.
+
+Matt Feinberg, Fall 2020, Tufts University

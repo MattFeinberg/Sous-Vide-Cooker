@@ -14,6 +14,7 @@ Background:
   data like temperature and timestamps.
 
 Files/Directories:
+  Sous-Vide-Video.mp4: Video demonstration of the machine in use
   Python Files:
     SousVide_code.py: The main script for the machine, which is run on the ESP32.
     Subscribe_and_write.py: This script is run on the Raspberry Pi to catch data

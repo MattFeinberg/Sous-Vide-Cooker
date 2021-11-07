@@ -1,3 +1,6 @@
+# This script will generate a graph of tempertaure and power values
+# from a cooking run 
+
 
 def loadvectors(filename):
     """
@@ -16,27 +19,32 @@ def loadvectors(filename):
                 d[key] = [float(val)] # Create a new list with just this one element
     return d # Finally, return the completed dictionary
 
-power = loadvectors('first_test_power.csv')
-temp = loadvectors('first_test_temp.csv')
+power = loadvectors('first_steak_power.csv')
+temp = loadvectors('first_steak_temp.csv')
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-a1 = np.array(temp['timestamp'])
-a2 = np.array(power['timestamp'])
+temp_time = np.array(temp['timestamp'])
+power_time = np.array(power['timestamp'])
 
-a2 = a2 - a1[0]
-a1 = a1 - a1[0]
-a1 = a1 / (60)
-a2 = a2 / (60)
+power_time = power_time - temp_time[0]
+temp_time = temp_time - temp_time[0]
+temp_time = temp_time / (60)
+power_time = power_time / (60)
 
-plt.plot(a1, temp['value'])
-#plt.plot(a2, power['value']) #adding the power squishes the temperature on the Y axis
-    
-plt.xlim(0,100)
+power_value = np.array(power['value'])
+power_value = power_value - 200
+
+
+plt.plot(temp_time, temp['value'])
+#plt.plot(power_time, power_value) #adding the power squishes the temperature on the Y axis
+
+plt.xlim(0,140)
+plt.ylim(50,65)
 plt.xlabel('Time [minutes]')
 plt.ylabel('Temperature of Water (C)')
-plt.legend(['Water Temp (C)', 'Power Draw (W)'])
+plt.legend(['Water Temp (C)', 'Power switched on/off'])
 plt.show()
 
 

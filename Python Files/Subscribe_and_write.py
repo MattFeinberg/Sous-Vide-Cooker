@@ -1,3 +1,7 @@
+# This script runs on a Raspberry Pi that is running a an MQTT broker to let the ESP32 Sous Vide
+# machine document temperature and time data from a cooking run.
+# Note: Must change topic name at various marked locations in the file before running
+
 import paho.mqtt.client as mqtt
 import time
 

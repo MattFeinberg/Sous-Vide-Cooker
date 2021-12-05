@@ -7,7 +7,7 @@ Background:
   Kitchen, I was tasked with modifying, trasnforming, or creating a kitchen 
   appliance. I chose to convert a basic old crock pot that had been in my basement
   for a long time into a sous vide cooker. I used an ESP32 microcontroller with
-  MicroPython to build my Sous Vide cooker. Users interact with capactive touch
+  MicroPython to build my Sous Vide cooker. Users interact with capacitive touch
   sensors to specify cooking temperatures and times. I also used a Raspberry Pi to
   run an MQTT broker to interact with a smart plug that powers on/off depending on
   values sent by the ESP32. The Raspberry Pi also makes it easier to gather cooking
